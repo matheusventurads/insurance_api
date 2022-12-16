@@ -73,5 +73,5 @@ class HealthInsurance:
         
         # join score into the original data
         original_data['score'] = pred[:,1].tolist()
-        
+
         return original_data.to_json(orient='records', date_format='iso')

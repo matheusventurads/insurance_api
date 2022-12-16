@@ -23,8 +23,10 @@ def health_insurance_predict():
         # Instantiate Rossmann class
         pipeline = HealthInsurance()    
     
+        df0 = test_raw.copy()
+    
         # data cleaning
-        df1 = pipeline.data_cleaning(test_raw)
+        df1 = pipeline.data_cleaning(df0)
         
         # feature enginnering
         df2 = pipeline.feature_engineering(df1)
